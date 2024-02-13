@@ -1,11 +1,21 @@
 /* gestaltung.css */
 
 body {
-    background-color: #fce4ec;
+    /* background-color: #fce4ec; */
     font-family: 'SF Pro', 'Helvetica Neue', sans-serif;
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+}
+
+main {
+    background-color: #141414;
+    top: 0;
+    position:absolute;
+}
+
+input[type="radio"] {
+    display: none;
 }
 
 h1 {
