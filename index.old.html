@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="data/style.css">
+    <meta charset="UTF-8">
+    <script src="data/script.js" defer></script>
+</head>
+<body>
+
+    <main>
+        <!-- Inhalte der Seite -->
+        <h1>Herzlich willkommen, meine Prinzessin!</h1>
+        
+        <!-- Einbetten des YouTube-Videos -->
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/ZuWLwVhpEjI" frameborder="0" allowfullscreen></iframe>
+        
+        <!-- Anzeige romantischer Bilder und Blumen -->
+        <section>
+            <img src="hmm2/ms1_small.jpeg" alt="Romantisches Bild 1">
+            <img src="hmm2/ms2_small.jpeg" alt="Romantisches Bild 2">
+            <img src="hmm2/ms4_small.jpeg" alt="Romantisches Bild 3">
+        </section>
+    
+        <!-- Einladung zum Valentinstag -->
+        <section class="invitation">
+            <p style="font-weight: bold; font-size: 18px; text-align: center;">
+                Meine Liebe Nusselnasse aus Dudulandia von Bubulandia,<br>
+                Du bist herzlich eingeladen zu einem romantischen Valentinstag! Dudu kann entscheiden, was Dudu essen will.<br>
+                Freue mich darauf, dich zu sehen!<br>
+                I Love You!
+            </p>
+        </section>
+        <form id="mail-form" action="mailto:sebastianr.p2000@hotmail.com" method="post">
+            <section class="catalog-container">
+                <div class="catalog-item">
+                    <input type="radio" name="dish" id="sushi" value="Sushi" required>
+                    <label for="sushi">
+                        <img src="https://images.lecker.de/sushi-selber-machen-b3jpg,id=48df8ccb,b=lecker,w=1600,ca=5.00,7.98,95.00,97.61,rm=sk.jpeg" alt="Sushi">
+                        <div>Sushi</div>
+                    </label>
+                </div>
+                <div class="catalog-item">
+                    <input type="radio" name="dish" id="hamburger" value="Hamburger" required>
+                    <label for="hamburger">
+                        <img src="https://reisehappen.de/wp-content/uploads/2022/03/Cheeseburger-4.jpg" alt="Hamburger">
+                        <div>Hamburger</div>
+                    </label>
+                </div>
+                <div class="catalog-item">
+                    <input type="radio" name="dish" id="pizza" value="Pizza" required>
+                    <label for="pizza">
+                        <img src="https://ich-liebe-kaese.de/fileadmin/Recipe/Recipe_1001-1100/rezept-pizza-bianca.jpg" alt="Pizza">
+                        <div>Pizza</div>
+                    </label>
+                </div>
+                <div class="catalog-item">
+                    <input type="radio" name="dish" id="steak" value="Steak" required>
+                    <label for="steak">
+                        <img src="https://www.chopstickbbq.de/wp-content/uploads/2020/01/IMG_20200104_175210-01-1600x1200-1-1200x1200.jpeg" alt="Steak">
+                        <div>Steak</div>
+                    </label>
+                </div>
+                <div class="catalog-item">
+                    <input type="radio" name="dish" id="pasta" value="Pasta" required>
+                    <label for="pasta">
+                        <img src="https://marleyspoon.com/media/recipes/167069/main_photos/large/schnelle-000fbd749868b6ae36c21580384aa542.jpeg" alt="Pasta">
+                        <div>Pasta</div>
+                    </label>
+                </div>
+                <div class="catalog-item">
+                    <input type="radio" name="dish" id="ramen" value="Ramen" required>
+                    <label for="dessert">
+                        <img src="https://www.einfachkochen.de/sites/einfachkochen.de/files/styles/full_width_tablet_4_3/public/2023-10/2023_ramen-suppe_aufmacher.jpg?h=4521fff0&itok=5pTZkqj-" alt="Dessert">
+                        <div>Ramen</div>
+                    </label>
+                </div>
+            </section>
+            <section class="date-picker">
+                    <label for="date">yup einen Nusselnase Termin aus:</label>
+                    <input type="date" id="date" name="date" required>
+                    <label for="time">yup eine Uhrzeit aus:</label>
+                    <input type="time" id="time" name="time" required>
+                    <button id="confirmButton">yup ^^</button>
+            </section>
+        </form>
+    
+        <!-- Fester Hintergrund am unteren Rand der Seite -->
+        <div class="fixed-background"></div>
+
+    </main>
+</body>
+</html>

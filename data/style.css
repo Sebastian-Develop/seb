@@ -1,0 +1,205 @@
+/* gestaltung.css */
+html {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    /* background-color: #fce4ec; */
+    font-family: 'SF Pro', 'Helvetica Neue', sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    height: 100%;
+    background-color: #141414;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+a {
+    text-decoration: none;
+    transition: .3s;
+}
+
+.test {
+    outline: 2px dashed #ff0000;
+    background-color: #ff00002c;
+}
+
+.dFlex {
+    display: flex;
+}
+
+nav {
+    padding: 20px;
+    height: calc( 100% - 40px);
+    width: 100px;
+    justify-content: center;
+    align-items: center;
+    background-color: #14141444;
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    /* border-right: 1px solid #555; */
+    user-select: none;
+}
+
+nav ul {
+    float: left;
+    writing-mode: tb;
+    display: inline-flex;
+    list-style-type: none;
+    font-size: 12px;
+}
+
+nav a {
+    color: #555;
+}
+
+ul li {
+    padding: 10px 0px;
+    transition: .3s;
+    cursor: pointer;
+}
+
+ul li:hover {
+    color: #ffffff;
+}
+
+.li-selected a {
+    color: #e6548e;
+}
+
+main {
+    top: 0;
+    position:absolute;
+    height: 100%;
+    width: 100%;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+.windowSlider-container {
+    width: -webkit-fill-available;
+    height: 100%;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+}
+
+h1 {
+    color: #e6548e;
+    text-align: left;
+    font-family: "Square Peg", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 60px;
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+h2 {
+    color: #e6548e;
+    text-align: left;
+    font-family: "Square Peg", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 60px;
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+p {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #ddd;
+    font-size: 16px;
+}
+
+.stars-container {
+    opacity: 0.25;
+    transform: rotate(45deg);
+}
+
+.window {
+    width: -webkit-fill-available;
+    height: 100%;
+    scroll-snap-align: start;
+}
+
+.themeImage-container {
+    width: calc(40% - 80px);
+    padding: 0px 80px;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.themeImage {
+    background: url('images/herz-demo.png')no-repeat center;
+    width: 100%;
+    height: 500px;
+    background-size: contain;
+}
+
+.content-container {
+    width: calc(60% - 20px);
+    height: 100%;
+    padding-left: 20px;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.content-container-left {
+    width: calc(60% - 100px);
+    height: 100%;
+    padding-left: 100px;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.themeImage-container-right {
+    width: calc(40% - 80px);
+    padding: 0px 80px;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.video-frame {
+    border-radius: 20px;
+    /* border: 1px solid #ddd; */
+    /* display: none; */
+}
+
+.text-container {
+   max-width: 80%;
+}
+
+.text-block {
+    padding-bottom: 40px;
+}
+
+.imageSlider-container {
+    border-radius: 20px;
+    overflow: hidden;
+    width: 80%;
+    height: 60%;
+    position: relative;
+}
+
+.imageSlider-image {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    position: absolute;
+    transition: opacity 2s ease-out;
+    display: inline-block;
+}
+
