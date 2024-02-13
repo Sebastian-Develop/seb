@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const mailFormElement = document.querySelector('#mail-form');
 
     function onMailFormSubmit(evt) {
-        alert('mail wird geschickt')
+        alert('mail wurde geschickt Danke!');
         // Zuerst sorgen wir dafür, dass der Formular nicht abgeschickt wird.
         evt.preventDefault();
 
