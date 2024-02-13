@@ -5,6 +5,13 @@
     <link rel="stylesheet" type="text/css" href="data/stars.css">
     <meta charset="UTF-8">
     <script src="data/script.js" defer></script>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Square+Peg&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Square+Peg&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="stars-container">
@@ -17,29 +24,79 @@
     <main class="dFlex">
         <nav class="navigation dFlex">
             <ul>
-                <li class="li-selected">Willkommen</li>
-                <li>Wir</li>
-                <li>Essen</li>
-                <li>Date</li>
+                <li class="nav-listItem li-selected" id="navLinkWelcome"><a href="#welcome">Willkommen</a></li>
+                <li class="nav-listItem" id="navLinkWe"><a href="#we">Wir</a></li>
+                <li class="nav-listItem" id="navLinkEat"><a href="#eat">Essen</a></li>
+                <li class="nav-listItem"><a href="#we">Date</a></li>
             </ul>
         </nav>
 
-        <div class="window window_welcome dFlex">
-            <div class="themeImage-container dFlex">
-                <div class="themeImage"></div>
+        <div class="windowSlider-container" id="window-slider">
+            <div class="window window_welcome dFlex" id="welcome">
+                <div class="themeImage-container dFlex">
+                    <div class="themeImage"></div>
+                </div>
+                <div class="content-container dFlex">
+                    <section class="text-block">
+                        <h1>Für meine Prinzessin!</h1>
+                        <div class="text-container">
+                            <p>Ich habe dir hier ein mini Geschenk gebastelt. Während du es erkundest, kannst du diesen Song laufen lassen.</p>
+                        </div>
+                    </section>
+                    <iframe width="360" height="180" src="https://www.youtube.com/embed/ZuWLwVhpEjI" frameborder="0" allowfullscreen class="video-frame"></iframe>
+                </div>
+                <!-- Inhalte der Seite -->
+                <!-- <h1>Herzlich willkommen, meine Prinzessin!</h1> -->
+                
+                <!-- Einbetten des YouTube-Videos -->
+                <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/ZuWLwVhpEjI" frameborder="0" allowfullscreen></iframe> -->
+                
             </div>
-            <div class="content-container test">
-
+            <div class="window window_we dFlex" id="we">
+                <div class="content-container-left dFlex">
+                    <section class="text-block">
+                        <h1>Wir</h1>
+                        <div class="text-container">
+                            <p> Meine Liebe Nusselnasse aus Dudulandia von Bubulandia,<br>
+                                Du bist herzlich eingeladen zu einem romantischen Valentinstag! Dudu kann entscheiden, was Dudu essen will.<br>
+                                Freue mich darauf, dich zu sehen!<br>
+                                I Love You!</p>
+                        </div>
+                    </section>
+                </div>
+                <div class="themeImage-container-right dFlex">
+                    <div class="imageSlider-container" id="sebSliderContainer">
+                       
+                    </div>
+                </div>
+                <!-- Inhalte der Seite -->
+                <!-- <h1>Herzlich willkommen, meine Prinzessin!</h1> -->
+                
+                <!-- Einbetten des YouTube-Videos -->
+                <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/ZuWLwVhpEjI" frameborder="0" allowfullscreen></iframe> -->
+                
             </div>
-            <!-- Inhalte der Seite -->
-            <!-- <h1>Herzlich willkommen, meine Prinzessin!</h1> -->
-            
-            <!-- Einbetten des YouTube-Videos -->
-            <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/ZuWLwVhpEjI" frameborder="0" allowfullscreen></iframe> -->
-            
-        </div>
-    
-
+            <div class="window window_we dFlex" id="eat">
+                <div class="themeImage-container dFlex">
+                    <div class="themeImage"></div>
+                </div>
+                <div class="content-container dFlex">
+                    <section class="text-block">
+                        <h1>Wir</h1>
+                        <div class="text-container">
+                            <p>Ich habe dir hier ein mini Geschenk gebastelt. Während du es erkundest, kannst du diesen Song laufen lassen.</p>
+                        </div>
+                    </section>
+                    <iframe width="360" height="180" src="https://www.youtube.com/embed/ZuWLwVhpEjI" frameborder="0" allowfullscreen class="video-frame"></iframe>
+                </div>
+                <!-- Inhalte der Seite -->
+                <!-- <h1>Herzlich willkommen, meine Prinzessin!</h1> -->
+                
+                <!-- Einbetten des YouTube-Videos -->
+                <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/ZuWLwVhpEjI" frameborder="0" allowfullscreen></iframe> -->
+                
+            </div>
+        </div> 
     </main>
 </body>
 </html>

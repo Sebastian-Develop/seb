@@ -1,53 +1,56 @@
-// script.js
 
-document.addEventListener("DOMContentLoaded", function () {
-    // Füge deine JavaScript-Logik hier ein
+// Scroll listener (check if element is in view and mark navigation button/s)
+const scrollContainer = document.querySelector("div#window-slider")
+const welcomeButton = document.getElementById('navLinkWelcome')
+const weButton = document.getElementById('navLinkWe')
+const eatButton = document.getElementById('navLinkEat')
 
-    // Beispiel: Ändere den Text des Haupttitels nach dem Laden der Seite
-    // var mainTitle = document.querySelector("h1");
-    // mainTitle.textContent = "";
-    
-    // Beispiel: Füge eine Klick-Ereignisbehandlung für den Bestätigen-Button hinzu
-    // var confirmButton = document.getElementById("confirmButton");
-    // confirmButton.addEventListener("click", function () {
-        // var selectedDate = document.getElementById("date").value;
-        // var selectedTime = document.getElementById("time").value;
-        // alert("Termin bestätigt!\nDatum: " + selectedDate + "\nUhrzeit: " + selectedTime);
-    // });
 
-    const mailFormElement = document.querySelector('#mail-form');
-
-    function onMailFormSubmit(evt) {
-        alert('mail wurde geschickt Danke!');
-        // Zuerst sorgen wir dafür, dass der Formular nicht abgeschickt wird.
-        evt.preventDefault();
-
-        // Dann erzeugen wir aus dem Fromular ein FormData Objekt.
-        const formData = new FormData(mailFormElement);
-
-        // Dann holen wir den Body text und die texte aus den Zusatzfeldern.
-        const bodyText = formData.get('body');
-        const bodyAdditional1Text = formData.get('date');
-        const bodyAdditional2Text = formData.get('time');
-
-        // Hier säubern wir die FormData um nur das nötigste an den MailClient zu schicken.
-        formData.delete('date');
-        formData.delete('time');
-
-        // Hier erstellen wir den Neuen Body Text und schreiben ihn zurück in die FormData.
-        // Das newline Zeichen (\n) wird später zu einer Entity, die der Client interpretieren kann.
-        const newBody = `${bodyText}\n${bodyAdditional1Text}\n${bodyAdditional2Text}`;
-        formData.set('body', newBody);
-
-        // heri erzeugen wir die URI aus der Formaction und dem Query String.
-        const queryString = new URLSearchParams(formData).toString().replace(/\+/g, '%20');
-        const url = `${mailFormElement.action}?${queryString}`
-
-        // Zum Schluss schicken wir das Formular mit Hilfe von window.href ab.
-        window.location.href = url;
+scrollContainer.addEventListener("scroll", (event) => {
+    const windowWelcome = document.querySelector("div#welcome").getBoundingClientRect();
+    const windowWe = document.querySelector("div#we").getBoundingClientRect();
+    const windowEat = document.querySelector("div#eat").getBoundingClientRect();
+    // var bounding = windowWelcome.getBoundingClientRect();
+    if (windowWelcome.top >= 0 && windowWelcome.left >= 0 && windowWelcome.right <= (window.innerWidth || document.documentElement.clientWidth) && windowWelcome.bottom <= (window.innerHeight || document.documentElement.clientHeight)) {
+        welcomeButton.classList.add('li-selected')
+    } else {
+        welcomeButton.classList.remove('li-selected')
     }
-
-    // Als erstes registrieren wir einen Eventhandler für das Submit Event auf dem Formular.
-    mailFormElement.addEventListener('submit', onMailFormSubmit);
-
+    if (windowWe.top >= 0 && windowWe.left >= 0 && windowWe.right <= (window.innerWidth || document.documentElement.clientWidth) && windowWe.bottom <= (window.innerHeight || document.documentElement.clientHeight)) {
+        weButton.classList.add('li-selected')
+    } else {
+        weButton.classList.remove('li-selected')
+    }
+    if (windowEat.top >= 0 && windowEat.left >= 0 && windowEat.right <= (window.innerWidth || document.documentElement.clientWidth) && windowEat.bottom <= (window.innerHeight || document.documentElement.clientHeight)) {
+        eatButton.classList.add('li-selected')
+    } else {
+        eatButton.classList.remove('li-selected')
+    }
 });
+// Image Slider
+let images = ["data/images/hmm2/ms1_small.jpeg", "data/images/hmm2/ms2_small.jpeg", "data/images/hmm2/ms4_small.jpeg"];
+const slider = document.querySelector('#sebSliderContainer');
+const imgEls = [];
+images.forEach(image => {
+  let imgEl = document.createElement('img');
+  imgEl.src = image;
+  imgEl.classList.add('imageSlider-image');
+  imgEls.push(imgEl);
+  slider.appendChild(imgEl);
+});
+let i = 0;
+// initial image setting
+imgEls[0].style.opacity = 1;
+imgEls[1].style.opacity = 0;
+imgEls[2].style.opacity = 0;
+function changeImg() {
+  imgEls[i].style.opacity = 0;
+  if (i < images.length - 1) {
+    i++;
+  } else {
+    i = 0;
+  }
+  imgEls[i].style.opacity = 1;
+  setTimeout("changeImg()", 3000);
+}
+window.onload = changeImg;
