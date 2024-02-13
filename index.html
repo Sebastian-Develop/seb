@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" type="text/css" href="gestalltung.css">
-    <script src="script.js" defer></script>
+    <meta charset="UTF-8">
+    <script src="Dynamik.js" defer></script>
 </head>
 <body>
 
@@ -17,8 +18,6 @@
         <img src="hmm2/ms1.JPG" alt="Romantisches Bild 1">
         <img src="hmm2/ms2.JPG" alt="Romantisches Bild 2">
         <img src="hmm2/ms4.JPG" alt="Romantisches Bild 3">
-        <div class="flower"></div>
-        <!-- Füge weitere Blumen oder Bilder hinzu, wie benötigt -->
     </section>
 
     <!-- Einladung zum Valentinstag -->
@@ -30,44 +29,59 @@
             I Love You!
         </p>
     </section>
-
-    <!-- Moderne Katalog mit Animationen -->
-    <section class="catalog-container">
-        <div class="catalog-item">
-            <img src="https://images.lecker.de/sushi-selber-machen-b3jpg,id=48df8ccb,b=lecker,w=1600,ca=5.00,7.98,95.00,97.61,rm=sk.jpeg" alt="Sushi">
-            <div>Sushi</div>
-        </div>
-        <div class="catalog-item">
-            <img src="https://reisehappen.de/wp-content/uploads/2022/03/Cheeseburger-4.jpg" alt="Hamburger">
-            <div>Hamburger</div>
-        </div>
-        <div class="catalog-item">
-            <img src="https://ich-liebe-kaese.de/fileadmin/Recipe/Recipe_1001-1100/rezept-pizza-bianca.jpg" alt="Pizza">
-            <div>Pizza</div>
-        </div>
-        <!-- Füge weitere Elemente hinzu, wie benötigt -->
-        <div class="catalog-item">
-            <img src="https://www.chopstickbbq.de/wp-content/uploads/2020/01/IMG_20200104_175210-01-1600x1200-1-1200x1200.jpeg" alt="Steak">
-            <div>Steak</div>
-        </div>
-        <div class="catalog-item">
-            <img src="https://marleyspoon.com/media/recipes/167069/main_photos/large/schnelle-000fbd749868b6ae36c21580384aa542.jpeg" alt="Pasta">
-            <div>Pasta</div>
-        </div>
-        <div class="catalog-item">
-            <img src="https://www.einfachkochen.de/sites/einfachkochen.de/files/styles/full_width_tablet_4_3/public/2023-10/2023_ramen-suppe_aufmacher.jpg?h=4521fff0&itok=5pTZkqj-" alt="Dessert">
-            <div>Dessert</div>
-        </div>
-    </section>
-
-    <!-- Datum-Auswahl -->
-    <section class="date-picker">
-        <label for="date">yup einen Nusselnase Termin aus:</label>
-        <input type="date" id="date" name="date">
-        <label for="time">yup eine Uhrzeit aus:</label>
-        <input type="time" id="time" name="time">
-        <button id="confirmButton">yup ^^</button>
-    </section>
+    <form id="mail-form" action="mailto:msend.php">
+        <section class="catalog-container">
+            <div class="catalog-item">
+                <input type="radio" name="dish" id="sushi" value="Sushi" required>
+                <label for="sushi">
+                    <img src="https://images.lecker.de/sushi-selber-machen-b3jpg,id=48df8ccb,b=lecker,w=1600,ca=5.00,7.98,95.00,97.61,rm=sk.jpeg" alt="Sushi">
+                    <div>Sushi</div>
+                </label>
+            </div>
+            <div class="catalog-item">
+                <input type="radio" name="dish" id="hamburger" value="Hamburger" required>
+                <label for="hamburger">
+                    <img src="https://reisehappen.de/wp-content/uploads/2022/03/Cheeseburger-4.jpg" alt="Hamburger">
+                    <div>Hamburger</div>
+                </label>
+            </div>
+            <div class="catalog-item">
+                <input type="radio" name="dish" id="pizza" value="Pizza" required>
+                <label for="pizza">
+                    <img src="https://ich-liebe-kaese.de/fileadmin/Recipe/Recipe_1001-1100/rezept-pizza-bianca.jpg" alt="Pizza">
+                    <div>Pizza</div>
+                </label>
+            </div>
+            <div class="catalog-item">
+                <input type="radio" name="dish" id="steak" value="Steak" required>
+                <label for="steak">
+                    <img src="https://www.chopstickbbq.de/wp-content/uploads/2020/01/IMG_20200104_175210-01-1600x1200-1-1200x1200.jpeg" alt="Steak">
+                    <div>Steak</div>
+                </label>
+            </div>
+            <div class="catalog-item">
+                <input type="radio" name="dish" id="pasta" value="Pasta" required>
+                <label for="pasta">
+                    <img src="https://marleyspoon.com/media/recipes/167069/main_photos/large/schnelle-000fbd749868b6ae36c21580384aa542.jpeg" alt="Pasta">
+                    <div>Pasta</div>
+                </label>
+            </div>
+            <div class="catalog-item">
+                <input type="radio" name="dish" id="ramen" value="Ramen" required>
+                <label for="dessert">
+                    <img src="https://www.einfachkochen.de/sites/einfachkochen.de/files/styles/full_width_tablet_4_3/public/2023-10/2023_ramen-suppe_aufmacher.jpg?h=4521fff0&itok=5pTZkqj-" alt="Dessert">
+                    <div>Ramen</div>
+                </label>
+            </div>
+        </section>
+        <section class="date-picker">
+                <label for="date">yup einen Nusselnase Termin aus:</label>
+                <input type="date" id="date" name="date" required>
+                <label for="time">yup eine Uhrzeit aus:</label>
+                <input type="time" id="time" name="time" required>
+                <button id="confirmButton">yup ^^</button>
+        </section>
+    </form>
 
     <!-- Fester Hintergrund am unteren Rand der Seite -->
     <div class="fixed-background"></div>
