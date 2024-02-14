@@ -68,7 +68,7 @@ ul a:hover {
 }
 
 .li-selected a {
-    color: #e6548e;
+    color: #f85db3;
 }
 
 main {
@@ -95,7 +95,7 @@ input[type="radio"] {
 }
 
 h1 {
-    color: #e6548e;
+    color: #f85db3;
     text-align: left;
     font-family: "Square Peg", cursive;
     font-weight: 400;
@@ -106,7 +106,7 @@ h1 {
 }
 
 h2 {
-    color: #e6548e;
+    color: #f85db3;
     text-align: left;
     font-family: "Square Peg", cursive;
     font-weight: 400;
@@ -169,8 +169,15 @@ div {
     align-items: center;
 }
 
-.themeImage {
-    background: url('images/herz-demo.png')no-repeat center;
+.themeImage-welcome {
+    background: url('images/SteveGekrizzel_1.png')no-repeat center;
+    width: 100%;
+    height: 500px;
+    background-size: contain;
+}
+
+.themeImage-date {
+    background: url('images/SteveGekrizzel_2.png')no-repeat center;
     width: 100%;
     height: 500px;
     background-size: contain;
@@ -299,8 +306,8 @@ div {
 
 .coupon input:checked ~ .coupon-text{
     color: #141414;
-    border: 2px solid #e6548e;
-    background-color: #e6548e;
+    border: 2px solid #f85db3;
+    background-color: #f85db3;
 }
 
 .coupon-sushi .couponBackground{
@@ -367,7 +374,7 @@ div {
 }
 
 .dateInput:hover {
-    border: 2px solid #e6548e;
+    border: 2px solid #f85db3;
 }
 
 .dateInput-day {
@@ -395,6 +402,6 @@ div {
 }
 .button-sendDate:hover {
     color: #fefefe;
-    border: 2px solid #e6548e;
-    background-color: #e6548e;
+    border: 2px solid #f85db3;
+    background-color: #f85db3;
 }
