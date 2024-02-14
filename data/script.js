@@ -65,7 +65,7 @@ window.onload = changeImg;
 
 function send() {
 
-    let sendMail = "stevearizona98@gmail.com"
+    let sendMail = "sebastianr.p2000@hotmail.com"
     let subject = "Valentinstag Gutschein"
 
     let mainForm = document.getElementById('mainForm')
