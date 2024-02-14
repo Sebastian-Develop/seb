@@ -63,8 +63,8 @@ ul li {
     cursor: pointer;
 }
 
-ul li:hover {
-    color: #ffffff;
+ul a:hover {
+    color: #fefefe;
 }
 
 .li-selected a {
@@ -79,7 +79,11 @@ main {
 }
 
 input[type="radio"] {
-    display: none;
+    /* display: none; */
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
 }
 
 .windowSlider-container {
@@ -120,6 +124,26 @@ p {
     font-size: 16px;
 }
 
+input {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+}
+
+button {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+}
+
+div {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
 .stars-container {
     opacity: 0.25;
     transform: rotate(45deg);
@@ -129,6 +153,12 @@ p {
     width: -webkit-fill-available;
     height: 100%;
     scroll-snap-align: start;
+}
+
+#food {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .themeImage-container {
@@ -147,9 +177,10 @@ p {
 }
 
 .content-container {
-    width: calc(60% - 20px);
+    width: calc(60% - 80px);
     height: 100%;
     padding-left: 20px;
+    padding-right: 60px;
     justify-content: center;
     flex-direction: column;
 }
@@ -185,6 +216,15 @@ p {
     padding-bottom: 40px;
 }
 
+.text-block-top {
+    width: calc(100% - 100px);
+    /* padding-left: 100px; */
+}
+
+.text-block-top  .text-container {
+    max-width: 50%;
+}
+
 .imageSlider-container {
     border-radius: 20px;
     overflow: hidden;
@@ -200,6 +240,161 @@ p {
     object-position: center;
     position: absolute;
     transition: opacity 2s ease-out;
-    display: inline-block;
 }
 
+.coupon-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding-right: 40px;
+    gap: 20px;
+}
+
+.coupon {
+    border-radius: 20px;
+    width: 100%;
+    height: 160px;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    transition: .3s;
+}
+
+.coupon-text {
+    padding: 20px;
+    min-width: 40%;
+    border-radius: 100px;
+    color: #fefefe;
+    border: 2px solid #fefefe;
+    text-align: center;
+    z-index: 20;
+    transition: .3s;
+}
+
+.couponBackground {
+    z-index: 19;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    filter: grayscale(1) brightness(0.5);
+    -webkit-filter: grayscale(1) brightness(0.5);
+    transition: .3s;
+}
+
+.coupon:hover .couponBackground{
+    filter: grayscale(0) brightness(0.7);
+    -webkit-filter: grayscale(0) brightness(0.7);
+}
+
+.coupon:hover .coupon-text {
+    color: #141414;
+    background-color: #fefefe;
+}
+
+.coupon input:checked ~ .couponBackground{
+    filter: grayscale(0) brightness(1);
+    -webkit-filter: grayscale(0) brightness(1);
+}
+
+.coupon input:checked ~ .coupon-text{
+    color: #141414;
+    border: 2px solid #e6548e;
+    background-color: #e6548e;
+}
+
+.coupon-sushi .couponBackground{
+    background: url('https://images.lecker.de/sushi-selber-machen-b3jpg,id=48df8ccb,b=lecker,w=1600,ca=5.00,7.98,95.00,97.61,rm=sk.jpeg')no-repeat center;
+    background-size: cover;
+}
+
+.coupon-hamburger .couponBackground{
+    background: url('https://reisehappen.de/wp-content/uploads/2022/03/Cheeseburger-4.jpg')no-repeat center;
+    background-size: cover;
+}
+
+.coupon-pizza .couponBackground{
+    background: url('https://ich-liebe-kaese.de/fileadmin/Recipe/Recipe_1001-1100/rezept-pizza-bianca.jpg')no-repeat center;
+    background-size: cover;
+}
+
+.coupon-steak .couponBackground{
+    background: url('https://www.chopstickbbq.de/wp-content/uploads/2020/01/IMG_20200104_175210-01-1600x1200-1-1200x1200.jpeg')no-repeat center;
+    background-size: cover;
+}
+
+.coupon-pasta .couponBackground{
+    background: url('https://marleyspoon.com/media/recipes/167069/main_photos/large/schnelle-000fbd749868b6ae36c21580384aa542.jpeg')no-repeat center;
+    background-size: cover;
+}
+
+.coupon-ramen .couponBackground{
+    background: url('https://www.einfachkochen.de/sites/einfachkochen.de/files/styles/full_width_tablet_4_3/public/2023-10/2023_ramen-suppe_aufmacher.jpg')no-repeat center;
+    background-size: cover;
+}
+
+.foodSelect-container{
+    width: calc(100% - 100px);
+    justify-content: center;
+    align-items: center;
+    padding-top:100px;
+}
+
+.foodSelect-container .coupon-container {
+    width: calc(100% - 100px);
+    padding-right: 80px;
+}
+
+.dateInputs-container {
+    padding-top: 20px;
+    gap: 10px;
+}
+
+.dateInput {
+    padding: 10px;
+    min-width: 100px;
+    border-radius: 100px;
+    color: #fefefe;
+    border: 2px solid #fefefe;
+    background-color: transparent;
+    text-align: center;
+    z-index: 20;
+    transition: .3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+}
+
+.dateInput:hover {
+    border: 2px solid #e6548e;
+}
+
+.dateInput-day {
+    cursor: pointer;
+}
+
+.dateSend-container {
+    padding-top: 80px;
+}
+
+.button-sendDate {
+    padding: 20px 40px;
+    border-radius: 100px;
+    color: #141414;
+    border: 2px solid #fefefe;
+    background-color: #fefefe;
+    text-align: center;
+    z-index: 20;
+    transition: .3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+    cursor: pointer;
+}
+.button-sendDate:hover {
+    color: #fefefe;
+    border: 2px solid #e6548e;
+    background-color: #e6548e;
+}
