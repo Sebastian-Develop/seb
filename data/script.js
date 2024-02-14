@@ -3,13 +3,15 @@
 const scrollContainer = document.querySelector("div#window-slider")
 const welcomeButton = document.getElementById('navLinkWelcome')
 const weButton = document.getElementById('navLinkWe')
-const eatButton = document.getElementById('navLinkEat')
+const foodButton = document.getElementById('navLinkFood')
+const dateButton = document.getElementById('navLinkDate')
 
 
 scrollContainer.addEventListener("scroll", (event) => {
     const windowWelcome = document.querySelector("div#welcome").getBoundingClientRect();
     const windowWe = document.querySelector("div#we").getBoundingClientRect();
-    const windowEat = document.querySelector("div#eat").getBoundingClientRect();
+    const windowFood = document.querySelector("div#food").getBoundingClientRect();
+    const windowDate = document.querySelector("div#date").getBoundingClientRect();
     // var bounding = windowWelcome.getBoundingClientRect();
     if (windowWelcome.top >= 0 && windowWelcome.left >= 0 && windowWelcome.right <= (window.innerWidth || document.documentElement.clientWidth) && windowWelcome.bottom <= (window.innerHeight || document.documentElement.clientHeight)) {
         welcomeButton.classList.add('li-selected')
@@ -21,10 +23,15 @@ scrollContainer.addEventListener("scroll", (event) => {
     } else {
         weButton.classList.remove('li-selected')
     }
-    if (windowEat.top >= 0 && windowEat.left >= 0 && windowEat.right <= (window.innerWidth || document.documentElement.clientWidth) && windowEat.bottom <= (window.innerHeight || document.documentElement.clientHeight)) {
-        eatButton.classList.add('li-selected')
+    if (windowFood.top >= 0 && windowFood.left >= 0 && windowFood.right <= (window.innerWidth || document.documentElement.clientWidth) && windowFood.bottom <= (window.innerHeight || document.documentElement.clientHeight)) {
+        foodButton.classList.add('li-selected')
     } else {
-        eatButton.classList.remove('li-selected')
+        foodButton.classList.remove('li-selected')
+    }
+    if (windowDate.top >= 0 && windowDate.left >= 0 && windowDate.right <= (window.innerWidth || document.documentElement.clientWidth) && windowDate.bottom <= (window.innerHeight || document.documentElement.clientHeight)) {
+        dateButton.classList.add('li-selected')
+    } else {
+        dateButton.classList.remove('li-selected')
     }
 });
 // Image Slider
@@ -35,14 +42,13 @@ images.forEach(image => {
   let imgEl = document.createElement('img');
   imgEl.src = image;
   imgEl.classList.add('imageSlider-image');
+  imgEl.style.opacity = 0;
   imgEls.push(imgEl);
   slider.appendChild(imgEl);
 });
 let i = 0;
 // initial image setting
 imgEls[0].style.opacity = 1;
-imgEls[1].style.opacity = 0;
-imgEls[2].style.opacity = 0;
 function changeImg() {
   imgEls[i].style.opacity = 0;
   if (i < images.length - 1) {
@@ -54,3 +60,23 @@ function changeImg() {
   setTimeout("changeImg()", 3000);
 }
 window.onload = changeImg;
+
+// send script
+
+function send() {
+
+    let sendMail = "stevearizona98@gmail.com"
+    let subject = "Valentinstag Gutschein"
+
+    let mainForm = document.getElementById('mainForm')
+    let coupon = mainForm.elements["coupon"].value
+    let dateDay = mainForm.elements["datum"].value
+    let dateTime = mainForm.elements["uhrzeit"].value
+
+    if(coupon === '' || dateDay === '' || dateTime === ''){
+        alert ('Bitte wähle ein Coupon und trage das gewünschte Datum ein!')
+    } else {
+        // alert('Daten: '+coupon+dateDay+dateTime)
+        window.location = "mailto:"+sendMail+"?&subject="+subject+"&body=Gutschein:%20"+coupon+"%0aTag: "+dateDay+"%0aUhrzeit: "+dateTime
+    }
+}

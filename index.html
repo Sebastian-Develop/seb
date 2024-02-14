@@ -1,103 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <!-- coding and design by Steve (fast project) -->
-    <link rel="stylesheet" type="text/css" href="data/style.css">
-    <link rel="stylesheet" type="text/css" href="data/stars.css">
-    <meta charset="UTF-8">
-    <script src="data/script.js" defer></script>
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Square+Peg&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Square+Peg&display=swap" rel="stylesheet">
-</head>
-<body>
-    <div class="stars-container">
-        <div id="stars"></div>
-        <div id="stars2"></div>
-        <div id="stars3"></div>
-    </div>
-
-
-    <main class="dFlex">
-        <nav class="navigation dFlex">
-            <ul>
-                <li class="nav-listItem li-selected" id="navLinkWelcome"><a href="#welcome">Willkommen</a></li>
-                <li class="nav-listItem" id="navLinkWe"><a href="#we">Wir</a></li>
-                <li class="nav-listItem" id="navLinkEat"><a href="#eat">Essen</a></li>
-                <li class="nav-listItem"><a href="#we">Date</a></li>
-            </ul>
-        </nav>
-
-        <div class="windowSlider-container" id="window-slider">
-            <div class="window window_welcome dFlex" id="welcome">
-                <div class="themeImage-container dFlex">
-                    <div class="themeImage"></div>
-                </div>
-                <div class="content-container dFlex">
-                    <section class="text-block">
-                        <h1>Für meine Prinzessin!</h1>
-                        <div class="text-container">
-                            <p>Ich habe dir hier ein mini Geschenk gebastelt. Während du es erkundest, kannst du diesen Song laufen lassen.</p>
+    <head>
+        <!-- coding and design by Steve (fast project) -->
+        <link rel="stylesheet" type="text/css" href="data/style.css">
+        <link rel="stylesheet" type="text/css" href="data/stars.css">
+        <meta charset="UTF-8">
+        <script src="data/script.js" defer></script>
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Square+Peg&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Square+Peg&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="stars-container">
+            <div id="stars"></div>
+            <div id="stars2"></div>
+            <div id="stars3"></div>
+        </div>
+        <main class="dFlex">
+            <nav class="navigation dFlex">
+                <ul>
+                    <li class="nav-listItem li-selected" id="navLinkWelcome"><a href="#welcome">Willkommen</a></li>
+                    <li class="nav-listItem" id="navLinkWe"><a href="#we">Wir</a></li>
+                    <li class="nav-listItem" id="navLinkFood"><a href="#food">Essen</a></li>
+                    <li class="nav-listItem" id="navLinkDate"><a href="#date">Date</a></li>
+                </ul>
+            </nav>
+            <form id="mainForm">
+                <div class="windowSlider-container" id="window-slider">
+                    <div class="window window_welcome dFlex" id="welcome">
+                        <div class="themeImage-container dFlex">
+                            <div class="themeImage"></div>
                         </div>
-                    </section>
-                    <iframe width="360" height="180" src="https://www.youtube.com/embed/ZuWLwVhpEjI" frameborder="0" allowfullscreen class="video-frame"></iframe>
-                </div>
-                <!-- Inhalte der Seite -->
-                <!-- <h1>Herzlich willkommen, meine Prinzessin!</h1> -->
-                
-                <!-- Einbetten des YouTube-Videos -->
-                <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/ZuWLwVhpEjI" frameborder="0" allowfullscreen></iframe> -->
-                
-            </div>
-            <div class="window window_we dFlex" id="we">
-                <div class="content-container-left dFlex">
-                    <section class="text-block">
-                        <h2>Wir</h2>
-                        <div class="text-container">
-                            <p> Meine Liebe Nusselnasse aus Dudulandia von Bubulandia,<br>
-                                Du bist herzlich eingeladen zu einem romantischen Valentinstag! Dudu kann entscheiden, was Dudu essen will.<br>
-                                Freue mich darauf, dich zu sehen!<br>
-                                I Love You!</p>
-                        </div>
-                    </section>
-                </div>
-                <div class="themeImage-container-right dFlex">
-                    <div class="imageSlider-container" id="sebSliderContainer">
-                       
+                        <div class="content-container dFlex">
+                            <section class="text-block">
+                                <h1>Für meine Prinzessin!</h1>
+                                <div class="text-container">
+                                    <p>Ich habe dir hier ein mini Geschenk gebastelt. Während du es erkundest, kannst du diesen Song laufen lassen.</p>
+                                </div>
+                            </section>
+                            <iframe width="360" height="180" src="https://www.youtube.com/embed/ZuWLwVhpEjI" frameborder="0" allowfullscreen class="video-frame"></iframe>
+                        </div>                
                     </div>
-                </div>
-                <!-- Inhalte der Seite -->
-                <!-- <h1>Herzlich willkommen, meine Prinzessin!</h1> -->
-                
-                <!-- Einbetten des YouTube-Videos -->
-                <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/ZuWLwVhpEjI" frameborder="0" allowfullscreen></iframe> -->
-                
-            </div>
-            <div class="window window_we dFlex" id="eat">
-                <div class="themeImage-container dFlex">
-                    <div class="themeImage"></div>
-                </div>
-                <div class="content-container dFlex">
-                    <section class="text-block">
-                        <h2>Essen</h2>
-                        <div class="text-container">
-                            <p>Ich habe dir hier ein mini Geschenk gebastelt. Während du es erkundest, kannst du diesen Song laufen lassen.</p>
+                    <div class="window window_we dFlex" id="we">
+                        <div class="content-container-left dFlex">
+                            <section class="text-block">
+                                <h2>Wir</h2>
+                                <div class="text-container">
+                                    <p> Meine Liebe Nusselnasse aus Dudulandia von Bubulandia,<br>
+                                        Du bist herzlich eingeladen zu einem romantischen Valentinstag! Dudu kann entscheiden, was Dudu essen will.<br>
+                                        Freue mich darauf, dich zu sehen!<br>
+                                        I Love You!</p>
+                                </div>
+                            </section>
                         </div>
-                    </section>
-                    <iframe width="360" height="180" src="https://www.youtube.com/embed/ZuWLwVhpEjI" frameborder="0" allowfullscreen class="video-frame"></iframe>
-                </div>
-                <!-- Inhalte der Seite -->
-                <!-- <h1>Herzlich willkommen, meine Prinzessin!</h1> -->
-                
-                <!-- Einbetten des YouTube-Videos -->
-                <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/ZuWLwVhpEjI" frameborder="0" allowfullscreen></iframe> -->
-                
-            </div>
-        </div> 
-    </main>
-</body>
+                        <div class="themeImage-container-right dFlex">
+                            <div class="imageSlider-container" id="sebSliderContainer">
+                            
+                            </div>
+                        </div>                
+                    </div>
+                    <div class="window window_food dFlex" id="food">
+                            <section class="text-block-top">
+                                <h2>Essen</h2>
+                                <div class="text-container">
+                                    <p>Wähle einen Gutschein aus</p>
+                                </div>
+                            </section>
+                        <div class="foodSelect-container dFlex">
+                            <div class="coupon-container">
+                                <label class="coupon coupon-sushi dFlex">
+                                    <input type="radio" name="coupon" value="Sushi" required/>
+                                    <div class="coupon-text">Sushi</div>
+                                    <div class="couponBackground"></div>
+                                </label>
+                                <label class="coupon coupon-hamburger dFlex">
+                                    <input type="radio" name="coupon" value="Hamburger" required/>
+                                    <div class="coupon-text">Hamburger</div>
+                                    <div class="couponBackground"></div>
+                                </label>
+                                <label class="coupon coupon-pizza dFlex">
+                                    <input type="radio" name="coupon" value="Pizza" required/>
+                                    <div class="coupon-text">Pizza</div>
+                                    <div class="couponBackground"></div>
+                                </label>
+                                <label class="coupon coupon-steak dFlex">
+                                    <input type="radio" name="coupon" value="Steak" required/>
+                                    <div class="coupon-text">Steak</div>
+                                    <div class="couponBackground"></div>
+                                </label>
+                                <label class="coupon coupon-pasta dFlex">
+                                    <input type="radio" name="coupon" value="Pasta" required/>
+                                    <div class="coupon-text">Pasta</div>
+                                    <div class="couponBackground"></div>
+                                </label>
+                                <label class="coupon coupon-ramen dFlex">
+                                    <input type="radio" name="coupon" value="Ramen" required/>
+                                    <div class="coupon-text">Ramen</div>
+                                    <div class="couponBackground"></div>
+                                </label>
+                            </div>       
+                        </div>
+                    </div>
+                    <div class="window window_date dFlex" id="date">
+                        <div class="themeImage-container dFlex">
+                            <div class="themeImage"></div>
+                        </div>
+                        <div class="content-container dFlex">
+                            <section class="text-block">
+                                <h1>Date</h1>
+                                <div class="text-container">
+                                    <p>Wähle ein datum aus, an dem wir zusammen essen gehen. Dieses wird mir dann als E-Mail geschickt (clicke also am ende auf senden)</p>
+                                </div>
+                                <div class="dateInputs-container dFlex">
+                                    <input type="date-local" class="dateInput dateInput-day" placeholder="Tag wählen" name="datum" required/>
+                                    <input type="text" class="dateInput dateinput-clock" placeholder="Urhzeit?" name="uhrzeit" required/>
+                                </div>
+                                <div class="dateSend-container">
+                                    <input type="button" class="button-sendDate" value="♥️ Abschicken" onClick="send()"/>
+                                </div>
+                            </section>
+                        </div>                
+                    </div>
+                </div> 
+            </form>
+        </main>
+    </body>
 </html>
